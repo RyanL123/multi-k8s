@@ -15,7 +15,7 @@ services:
             - PGHOST=$PGHOST
             - PGDATABASE=$PGDATABASE
             - PGPASSWORD=$PGPASSWORD
-            - PGPORT=$PGPORT 
+            - PGPORT=$PGPORT
     worker:
         image: "ryanl123/multi-worker"
         mem_limit: 128m
@@ -24,7 +24,7 @@ services:
             - REDIS_HOST=$REDIS_HOST
             - REDIS_PORT=$REDIS_PORT
     nginx:
-        image: "ryanl123/nginx"
+        image: "ryanl123/multi-nginx"
         mem_limit: 128m
         hostname: nginx
         ports:
